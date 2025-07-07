@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NumiBrain Academy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 640px;
+      margin: auto;
+      padding: 16px;
+    }
+    header {
+      text-align: center;
+      background: #fff;
+      padding: 24px 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    header img { max-width: 120px; margin-bottom: 16px; }
+    header h1 {
+      margin: 8px 0;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+    header h2 {
+      margin: 4px 0;
+      font-size: 1.2em;
+      color: #555;
+    }
+    
+    section { margin-top: 24px; }
+    .list-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .list-item i {
+      font-size: 1.4em;
+      color: green;
+    }
+    .list-item div {
+      font-size: 1em;
+    }
+    .sub-title {
+      font-size: 1.3em;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    .icons-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .icon-box {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .icon-box img {
+      max-width: 60px;
+      margin-bottom: 8px;
+    }
+    .icon-box span { display: block; font-weight: bold; }
+
+    .course-info, .results {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .course-info p, .results p { margin: 8px 0; }
+    .whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin: 24px 0;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #121212; color: #eee; }
+      header, .course-info, .results, .icon-box { background: #1e1e1e; box-shadow: 0 1px 4px rgba(255,255,255,0.1); }
+      .whatsapp { filter: brightness(0.9); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <img src="https://example.com/abacus_kid.png" alt="طفل وسّامه مع عدّاد خشبي">
+    <h1>لماذا الحساب الذهني؟</h1>
+    <h2>Warum mentale Mathematik?</h2>
+  </header>
+
+  <section>
+    <div class="sub-title">الفوائد / Vorteile</div>
+    <div class="list-item"><i>✅</i><div>تعزيز التركيز<br><small>Verbesserung der Konzentration</small></div></div>
+    <div class="list-item"><i>✅</i><div>زيادة الثقة بالنفس<br><small>Steigerung des Selbstvertrauens</small></div></div>
+    <div class="list-item"><i>✅</i><div>سرعة البديهة<br><small>Schnelligkeit im Denken</small></div></div>
+    <div class="list-item"><i>✅</i><div>تقوية الذاكرة<br><small>Stärkung des Gedächtnisses</small></div></div>
+  </section>
+
+  <section>
+    <div class="sub-title">ما الذي سيتعلمه طفلك؟ / Was wird ihr Kind lernen?</div>
+    <div class="icons-grid">
+      <div class="icon-box"><img src="https://example.com/icon_memory.png"><span>الذاكرة<br><small>Gedächtnis</small></span></div>
+      <div class="icon-box"><img src="https://example.com/icon_logic.png"><span>المنطق<br><small>Logik</small></span></div>
+      <div class="icon-box"><img src="https://example.com/icon_speed.png"><span>السرعة<br><small>Schnelligkeit</small></span></div>
+      <div class="icon-box"><img src="https://example.com/icon_confidence.png"><span>الثقة<br><small>Selbstvertrauen</small></span></div>
+    </div>
+  </section>
+
+  <section class="course-info">
+    <div class="sub-title">عن الدورة / Über den Kurs</div>
+    <p><strong>المدربة / Instructor:</strong> نور صالحة</p>
+    <p><strong>العمر / Alter:</strong> 5–10 سنوات</p>
+    <p><strong>المدة / Dauer:</strong> عدة أسابيع</p>
+    <a href="https://wa.me/201781036708" class="whatsapp">
+      <img src="https://example.com/whatsapp_icon.png" alt="WhatsApp" width="24"> للتسجيل عبر واتساب
+    </a>
+  </section>
+
+  <section class="results">
+    <div class="sub-title">النتائج المتوقعة / Die erwarteten Ergebnisse</div>
+    <p>💡 تحسين سرعة الحساب – Verbesserung der Rechengeschwindigkeit</p>
+    <p>💡 زيادة التركيز – Steigerung der Konzentration</p>
+    <p>💡 بناء الثقة بالنفس – Aufbau des Selbstvertrauens</p>
+  </section>
+
+  <footer>© 2025 NumiBrain Academy – الحساب الذهني للأطفال للجميع</footer>
+</div>
+
+</body>
+</html>
