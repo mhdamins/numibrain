@@ -2,157 +2,120 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NumiBrain Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Tajawal', sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      background-color: #ffffff;
       color: #333;
-      line-height: 1.5;
     }
-    .container {
-      max-width: 640px;
-      margin: auto;
-      padding: 16px;
+    header, section {
+      padding: 40px 20px;
+      text-align: center;
     }
     header {
-      text-align: center;
-      background: #fff;
-      padding: 24px 16px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background-color: #64B5F6;
+      color: white;
     }
-    header img { max-width: 120px; margin-bottom: 16px; }
-    header h1 {
-      margin: 8px 0;
-      font-size: 1.6em;
-      font-weight: bold;
-    }
-    header h2 {
-      margin: 4px 0;
-      font-size: 1.2em;
-      color: #555;
-    }
-    
-    section { margin-top: 24px; }
-    .list-item {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-    .list-item i {
-      font-size: 1.4em;
-      color: green;
-    }
-    .list-item div {
-      font-size: 1em;
-    }
-    .sub-title {
-      font-size: 1.3em;
-      margin-bottom: 12px;
-      font-weight: bold;
-    }
-
-    .icons-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    .icon-box {
-      background: #fff;
-      padding: 16px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-    .icon-box img {
-      max-width: 60px;
-      margin-bottom: 8px;
-    }
-    .icon-box span { display: block; font-weight: bold; }
-
-    .course-info, .results {
-      background: #fff;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-    .course-info p, .results p { margin: 8px 0; }
-    .whatsapp {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #25d366;
-      color: #fff;
-      padding: 8px 12px;
+    .btn {
+      background-color: #FFA726;
+      color: white;
+      padding: 10px 20px;
+      border: none;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
     }
-
-    footer {
-      text-align: center;
-      margin: 24px 0;
-      font-size: 0.9em;
-      color: #777;
+    .courses, .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
-
-    @media (prefers-color-scheme: dark) {
-      body { background: #121212; color: #eee; }
-      header, .course-info, .results, .icon-box { background: #1e1e1e; box-shadow: 0 1px 4px rgba(255,255,255,0.1); }
-      .whatsapp { filter: brightness(0.9); }
+    .card {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      text-align: right;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Tajawal', sans-serif;
     }
   </style>
 </head>
 <body>
-
-<div class="container">
   <header>
-    <img src="https://example.com/abacus_kid.png" alt="طفل وسّامه مع عدّاد خشبي">
-    <h1>لماذا الحساب الذهني؟</h1>
-    <h2>Warum mentale Mathematik?</h2>
+    <h1>NumiBrain Academy</h1>
+    <p>استثمر في طفلك من اليوم، وامنح عقله انطلاقة قوية نحو المستقبل!</p>
+    <button class="btn" onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">احجز الآن</button>
   </header>
 
   <section>
-    <div class="sub-title">الفوائد / Vorteile</div>
-    <div class="list-item"><i>✅</i><div>تعزيز التركيز<br><small>Verbesserung der Konzentration</small></div></div>
-    <div class="list-item"><i>✅</i><div>زيادة الثقة بالنفس<br><small>Steigerung des Selbstvertrauens</small></div></div>
-    <div class="list-item"><i>✅</i><div>سرعة البديهة<br><small>Schnelligkeit im Denken</small></div></div>
-    <div class="list-item"><i>✅</i><div>تقوية الذاكرة<br><small>Stärkung des Gedächtnisses</small></div></div>
-  </section>
-
-  <section>
-    <div class="sub-title">ما الذي سيتعلمه طفلك؟ / Was wird ihr Kind lernen?</div>
-    <div class="icons-grid">
-      <div class="icon-box"><img src="https://example.com/icon_memory.png"><span>الذاكرة<br><small>Gedächtnis</small></span></div>
-      <div class="icon-box"><img src="https://example.com/icon_logic.png"><span>المنطق<br><small>Logik</small></span></div>
-      <div class="icon-box"><img src="https://example.com/icon_speed.png"><span>السرعة<br><small>Schnelligkeit</small></span></div>
-      <div class="icon-box"><img src="https://example.com/icon_confidence.png"><span>الثقة<br><small>Selbstvertrauen</small></span></div>
+    <h2>الدورات المتاحة / Verfügbare Kurse</h2>
+    <div class="courses">
+      <div class="card">
+        <h3>الحساب الذهني / Mentale Mathematik</h3>
+        <p>يعزز التركيز، الذاكرة، والسرعة الذهنية – مهم لطفلك لينطلق بذكاء!</p>
+      </div>
+      <div class="card">
+        <h3>مكعبات الروبك / Rubik's Cube</h3>
+        <p>تنمي مهارات التفكير المنطقي والحلول المبتكرة بطريقة ممتعة.</p>
+      </div>
+      <div class="card">
+        <h3>اللغة العربية / Arabische Sprache</h3>
+        <p>تطوير اللغة الأم وزيادة الثقة بالنفس من خلال التحدث والقراءة.</p>
+      </div>
     </div>
   </section>
 
-  <section class="course-info">
-    <div class="sub-title">عن الدورة / Über den Kurs</div>
-    <p><strong>المدربة / Instructor:</strong> نور صالحة</p>
-    <p><strong>العمر / Alter:</strong> 5–10 سنوات</p>
-    <p><strong>المدة / Dauer:</strong> عدة أسابيع</p>
-    <a href="https://wa.me/201781036708" class="whatsapp">
-      <img src="https://example.com/whatsapp_icon.png" alt="WhatsApp" width="24"> للتسجيل عبر واتساب
-    </a>
+  <section>
+    <h2>🎁 مكالمة مجانية لمدة 30 دقيقة</h2>
+    <p>نقوم بتقييم مستوى الطفل العقلي والذهني لتحديد الدورة الأنسب له.</p>
   </section>
 
-  <section class="results">
-    <div class="sub-title">النتائج المتوقعة / Die erwarteten Ergebnisse</div>
-    <p>💡 تحسين سرعة الحساب – Verbesserung der Rechengeschwindigkeit</p>
-    <p>💡 زيادة التركيز – Steigerung der Konzentration</p>
-    <p>💡 بناء الثقة بالنفس – Aufbau des Selbstvertrauens</p>
+  <section>
+    <h2>عن المدربة / Über die Trainerin</h2>
+    <p>نور صالحة، مدربة معتمدة دولياً متخصصة في تعليم الأطفال بطرق تفاعلية ممتعة.</p>
   </section>
 
-  <footer>© 2025 NumiBrain Academy – الحساب الذهني للأطفال للجميع</footer>
-</div>
+  <section id="booking">
+    <h2>📥 نموذج التسجيل / Anmeldeformular</h2>
+    <form action="https://formspree.io/f/xnqeknvd" method="POST">
+      <label>الاسم الكامل / Vollständiger Name</label>
+      <input type="text" name="name" required>
 
+      <label>عمر الطفل / Alter des Kindes</label>
+      <input type="text" name="child_age" required>
+
+      <label>رقم الهاتف / Telefonnummer</label>
+      <input type="text" name="phone" required>
+
+      <label>البريد الإلكتروني (اختياري) / E-Mail (optional)</label>
+      <input type="email" name="email">
+
+      <label>نوع الدورة / Kursart</label>
+      <select name="course_type" required>
+        <option value="الحساب الذهني">الحساب الذهني</option>
+        <option value="مكعبات الروبك">مكعبات الروبك</option>
+        <option value="اللغة العربية">اللغة العربية</option>
+      </select>
+
+      <button type="submit">أرسل الطلب / Anfrage senden</button>
+    </form>
+  </section>
 </body>
 </html>
