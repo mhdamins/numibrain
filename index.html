@@ -1,14 +1,3 @@
-import shutil
-
-# Prepare the path for the final website ZIP folder
-website_folder = "/mnt/data/numibrain_website_v2"
-zip_path = "/mnt/data/numibrain_website_v2.zip"
-
-# Create folder structure and sample HTML with the updated description and style
-os.makedirs(website_folder + "/images", exist_ok=True)
-
-# Sample updated HTML (very simplified, just the starting structure with logo and hero section)
-html_content = '''
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -17,47 +6,25 @@ html_content = '''
   <title>NumiBrain Academy</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Baloo Bhaijaan 2', cursive;
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      background: linear-gradient(to right, #FFD54F, #4FC3F7);
-      padding: 30px 10px;
-    }
-    header img {
-      max-width: 160px;
-      margin-bottom: 20px;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #FF7043;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #4A148C;
-    }
-    section {
-      padding: 20px;
-    }
-    .course {
-      background: #FFF8E1;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 10px 0;
-    }
-    .course h2 {
-      color: #0288D1;
-    }
-    .course p {
-      margin: 5px 0;
-      font-size: 1rem;
-    }
+    body { font-family: 'Baloo Bhaijaan 2', cursive; margin: 0; padding: 0; background: #FFFFFF; color: #333; }
+    header { text-align: center; background: linear-gradient(45deg, #FFA726, #64B5F6); padding: 40px 20px; }
+    header img { max-width: 160px; margin-bottom: 15px; }
+    header h1 { font-size: 2.5rem; color: #4FC3F7; margin: 0; }
+    header p { font-size: 1.2rem; color: #FFFFFF; margin: 10px 0; }
+    .btn { background: #FF7043; color: #fff; padding: 12px 24px; font-size: 1.1rem; border: none; border-radius: 8px; cursor: pointer; }
+    .btn:hover { background: #FB8C00; }
+    section { padding: 30px 20px; max-width: 800px; margin: auto; }
+    .course { background: #F3E5F5; border-radius: 12px; padding: 20px; margin: 20px 0; }
+    .course h2 { color: #BA68C8; margin-bottom: 10px; }
+    .course p { margin: 8px 0; font-size: 1rem; }
+    .free-call { background: #E8F5E9; border-left: 8px solid #66BB6A; padding: 20px; border-radius: 8px; margin: 30px 0; }
+    .trainer { background: #E3F2FD; border-radius: 8px; padding: 20px; margin: 30px 0; }
+    form { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+    input, select { padding: 12px; font-size: 1rem; border: 2px solid #ccc; border-radius: 6px; }
+    input:focus, select:focus { border-color: #64B5F6; outline: none; }
+    textarea { resize: vertical; }
+    .submit-btn { background: #64B5F6; color: #fff; padding: 14px; border: none; border-radius: 8px; font-size: 1.1rem; cursor: pointer; }
+    .submit-btn:hover { background: #42A5F5; }
   </style>
 </head>
 <body>
@@ -65,41 +32,56 @@ html_content = '''
 <header>
   <img src="images/logo.jpg" alt="NumiBrain Logo">
   <h1>NumiBrain Academy</h1>
-  <p>استثمر في طفلك من اليوم، وامنح عقله انطلاقة قوية نحو المستقبل!</p>
+  <p>استثمر في طفلك… وامنح عقله انطلاقة قوية نحو المستقبل!</p>
+  <button class="btn" onclick="document.getElementById('book-section').scrollIntoView({behavior:'smooth'});">
+    احجز الآن
+  </button>
 </header>
 
 <section>
   <div class="course">
     <h2>🧠 دورة الحساب الذهني</h2>
-    <p>يعزز التركيز والانتباه، ويطور البديهة والذاكرة.</p>
-    <p>يتعلم الطفل حل مسائل رياضية معقدة بسرعة وبدون آلة حاسبة!</p>
+    <p><strong>الفوائد:</strong> تعزيز التركيز، سرعة البديهة، وتقوية الذاكرة.</p>
+    <p><strong>لماذا نسجل؟</strong> يتعلم الطفل حل مسائل معقدة بسرعة مذهلة بدون آلة حاسبة.</p>
   </div>
-
   <div class="course">
     <h2>🎲 دورة مكعبات الروبك</h2>
-    <p>تنمّي مهارات التحليل والتفكير المنطقي.</p>
-    <p>تساعد الطفل على تطوير الصبر والانضباط العقلي من خلال التحدي والمتعة.</p>
+    <p><strong>الفوائد:</strong> تطوير التفكير المنطقي والتحليلي، وزيادة الصبر والانضباط.</p>
+    <p><strong>لماذا نسجل؟</strong> نشاط ترفيهي وذهني في آن واحد، يبني ثقة الطفل بنفسه.</p>
   </div>
-
   <div class="course">
     <h2>🗣️ دورة اللغة العربية</h2>
-    <p>تحسن النطق والقراءة، وتدعم الثقة بالنفس.</p>
-    <p>يتعلّم الطفل المفردات بأسلوب تفاعلي محبب وسهل.</p>
+    <p><strong>الفوائد:</strong> تحسين النطق والقراءة، وتعزيز الفهم اللغوي والتعبير.</p>
+    <p><strong>لماذا نسجل؟</strong> يتعلم الطفل المفردات بطريقة تفاعلية وممتعة.</p>
+  </div>
+
+  <div class="free-call">
+    <h2>📞 مكالمة تقييم مجانية (30 دقيقة)</h2>
+    <p>نقدّم لك مكالمة مجانية لمدة 30 دقيقة لتقييم مستوى طفلك الذهني واختيار الدورة الأنسب له.</p>
+  </div>
+
+  <div class="trainer">
+    <h2>👩‍🏫 المدربة نور صالحة</h2>
+    <p>حاصلة على شهادة دولية معتمدة في تنمية مهارات الحساب الذهني واللغة.</p>
+  </div>
+
+  <div id="book-section">
+    <h2>احجز الآن</h2>
+    <https://formspree.io/f/mkgzwpja>
+      <input type="text" name="اسم_الوالد" placeholder="اسمك الكامل" required>
+      <input type="number" name="عمر_الطفل" placeholder="عمر الطفل" required>
+      <input type="tel" name="رقم_الهاتف" placeholder="رقم الهاتف" required>
+      <input type="email" name="البريد_الإلكتروني" placeholder="البريد الإلكتروني (اختياري)">
+      <select name="الدورة_المهتم_بها" required>
+        <option value="">اختر الدورة</option>
+        <option value="الحساب الذهني">الحساب الذهني</option>
+        <option value="مكعبات الروبك">مكعبات الروبك</option>
+        <option value="اللغة العربية">اللغة العربية</option>
+      </select>
+      <button type="submit" class="submit-btn">أرسل البيانات</button>
+    </form>
   </div>
 </section>
 
 </body>
 </html>
-'''
-
-# Save HTML file
-with open(os.path.join(website_folder, "index.html"), "w", encoding="utf-8") as file:
-    file.write(html_content)
-
-# Copy optimized logo image to website folder
-shutil.copy("/mnt/data/numibrain_logo_optimized.jpg", f"{website_folder}/images/logo.jpg")
-
-# Zip the folder for download
-shutil.make_archive(website_folder, 'zip', website_folder)
-
-zip_path
