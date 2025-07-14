@@ -1,196 +1,50 @@
-# Re-import necessary modules after code execution reset
-html_code = '''
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NumiBrain Academy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Baloo Bhaijaan 2', cursive;
-      margin: 0;
-      padding: 0;
-      background: #AD3D9E;
-      color: #ffffff;
-    }
-
-    header {
-      text-align: center;
-      background: linear-gradient(to right, #4FC3F7, #FFB74D);
-      padding: 40px 20px;
-    }
-
-    header img {
-      max-width: 160px;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      color: #FFFFFF;
-      margin: 0;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #FFFFFF;
-      margin: 10px 0;
-    }
-
-    .btn {
-      background: #F06292;
-      color: #fff;
-      padding: 12px 24px;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #EC407A;
-    }
-
-    section {
-      padding: 30px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .course {
-      background: #FCE4EC;
-      border-left: 6px solid #CE93D8;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px 0;
-    }
-
-    .course h2 {
-      color: #BA68C8;
-      margin-bottom: 10px;
-    }
-
-    .course p {
-      margin: 8px 0;
-      font-size: 1rem;
-    }
-
-    .free-call {
-      background: #E8F5E9;
-      border-left: 8px solid #81C784;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 30px 0;
-    }
-
-    .trainer {
-      background: #E3F2FD;
-      border-radius: 8px;
-      padding: 20px;
-      margin: 30px 0;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      margin: 30px 0;
-    }
-
-    input, select {
-      padding: 12px;
-      font-size: 1rem;
-      border: 2px solid #FFB74D;
-      border-radius: 6px;
-    }
-
-    input:focus, select:focus {
-      border-color: #64B5F6;
-      outline: none;
-    }
-
-    .submit-btn {
-      background: #4FC3F7;
-      color: #fff;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    .submit-btn:hover {
-      background: #29B6F6;
-    }
-  </style>
+  <title>My Awesome Site</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <img src="images/logo.jpg" alt="NumiBrain Logo">
-  <h1>NumiBrain Academy</h1>
-  <p>استثمر في طفلك… وامنح عقله انطلاقة قوية نحو المستقبل!</p>
-  <button class="btn" onclick="document.getElementById('book-section').scrollIntoView({behavior:'smooth'});">
-    احجز الآن
-  </button>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="logo">⭐️ MySite</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger">&#9776;</div>
+    </nav>
+  </header>
 
-<section>
-  <div class="course">
-    <h2>🧠 دورة الحساب الذهني</h2>
-    <p><strong>الفوائد:</strong> تعزيز التركيز، سرعة البديهة، وتقوية الذاكرة.</p>
-    <p><strong>لماذا نسجل؟</strong> يتعلم الطفل حل مسائل معقدة بسرعة مذهلة بدون آلة حاسبة.</p>
-  </div>
+  <section id="hero" class="hero">
+    <h1>Welcome to My Awesome Website</h1>
+    <p>Building beauty with code ✨</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
 
-  <div class="course">
-    <h2>🎲 دورة مكعبات الروبك</h2>
-    <p><strong>الفوائد:</strong> تطوير التفكير المنطقي والتحليلي، وزيادة الصبر والانضباط.</p>
-    <p><strong>لماذا نسجل؟</strong> نشاط ترفيهي وذهني في آن واحد، يبني ثقة الطفل بنفسه.</p>
-  </div>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate developer who loves crafting beautiful web experiences using HTML, CSS & JavaScript!</p>
+  </section>
 
-  <div class="course">
-    <h2>🗣️ دورة اللغة العربية</h2>
-    <p><strong>الفوائد:</strong> تحسين النطق والقراءة، وتعزيز الفهم اللغوي والتعبير.</p>
-    <p><strong>لماذا نسجل؟</strong> يتعلم الطفل المفردات بطريقة تفاعلية وممتعة.</p>
-  </div>
-
-  <div class="free-call">
-    <h2>📞 مكالمة تقييم مجانية (30 دقيقة)</h2>
-    <p>نقدّم لك مكالمة مجانية لمدة 30 دقيقة لتقييم مستوى طفلك الذهني واختيار الدورة الأنسب له.</p>
-  </div>
-
-  <div class="trainer">
-    <h2>👩‍🏫 المدربة نور صالحة</h2>
-    <p>حاصلة على شهادة دولية معتمدة في تنمية مهارات الحساب الذهني واللغة.</p>
-  </div>
-
-  <div id="book-section">
-    <h2>احجز الآن</h2>
-    <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
-      <input type="text" name="اسم_الوالد" placeholder="اسمك الكامل" required>
-      <input type="number" name="عمر_الطفل" placeholder="عمر الطفل" required>
-      <input type="tel" name="رقم_الهاتف" placeholder="رقم الهاتف" required>
-      <input type="email" name="البريد_الإلكتروني" placeholder="البريد الإلكتروني (اختياري)">
-      <select name="الدورة_المهتم_بها" required>
-        <option value="">اختر الدورة</option>
-        <option value="الحساب الذهني">الحساب الذهني</option>
-        <option value="مكعبات الروبك">مكعبات الروبك</option>
-        <option value="اللغة العربية">اللغة العربية</option>
-      </select>
-      <button type="submit" class="submit-btn">أرسل البيانات</button>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-  </div>
-</section>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-'''
-
-# Save the full HTML code
-html_file_path = "/mnt/data/numibrain_full_site_code.html"
-with open(html_file_path, "w", encoding="utf-8") as f:
-    f.write(html_code)
-
-html_file_path
